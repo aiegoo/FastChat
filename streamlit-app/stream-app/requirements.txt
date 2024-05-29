@@ -1,0 +1,6 @@
+streamlit
+llama-index
+llama-index-vector-stores-faiss
+llama-index-embeddings-huggingface
+huggingface-hub
+faiss-cpu
