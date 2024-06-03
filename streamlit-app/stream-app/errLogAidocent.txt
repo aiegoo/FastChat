@@ -1,0 +1,30 @@
+LLM is explicitly disabled. Using MockLLM.
+/tmp/tmpcw66ano5/adcMcuLcd.png
+2024-05-29 00:38:24.322 Uncaught app exception
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 552, in _run_script
+    exec(code, module.__dict__)
+  File "/home/ubuntu/repos/fastchat/streamlit-app/app.py", line 158, in <module>
+    main()
+  File "/home/ubuntu/repos/fastchat/streamlit-app/app.py", line 151, in main
+    index = store_document(uploaded_file)
+  File "/home/ubuntu/repos/fastchat/streamlit-app/app.py", line 53, in store_document
+    index = VectorStoreIndex.from_documents(
+  File "/opt/conda/lib/python3.10/site-packages/llama_index/core/indices/base.py", line 145, in from_documents
+    return cls(
+  File "/opt/conda/lib/python3.10/site-packages/llama_index/core/indices/vector_store/base.py", line 75, in __init__
+    super().__init__(
+  File "/opt/conda/lib/python3.10/site-packages/llama_index/core/indices/base.py", line 94, in __init__
+    index_struct = self.build_index_from_nodes(
+  File "/opt/conda/lib/python3.10/site-packages/llama_index/core/indices/vector_store/base.py", line 308, in build_index_from_nodes
+    return self._build_index_from_nodes(nodes, **insert_kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/llama_index/core/indices/vector_store/base.py", line 280, in _build_index_from_nodes
+    self._add_nodes_to_index(
+  File "/opt/conda/lib/python3.10/site-packages/llama_index/core/indices/vector_store/base.py", line 234, in _add_nodes_to_index
+    new_ids = self._vector_store.add(nodes_batch, **insert_kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/llama_index/vector_stores/faiss/base.py", line 121, in add
+    self._faiss_index.add(text_embedding_np)
+  File "/opt/conda/lib/python3.10/site-packages/faiss/class_wrappers.py", line 228, in replacement_add
+    assert d == self.d
+AssertionError
+
